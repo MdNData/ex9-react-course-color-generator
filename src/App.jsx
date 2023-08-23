@@ -13,8 +13,7 @@ const App = () => {
         colorList={colorList}
         setColorList={setColorList}
       />
-      <ColorList />
-      
+      <ColorList colorList={colorList} />
     </section>
   );
 };

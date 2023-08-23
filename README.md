@@ -1,26 +1,4 @@
 
-#### Values.js
-
-Install the values.js library and use it to generate a list of colors in the App component.
-
-[Values.js Library](https://github.com/noeldelgado/values.js/blob/master/README.md)
-
-```sh
-npm i values.js
-
-```
-
-```js
-import Values from 'values.js';
-new Values('#f15025').all(10);
-```
-
-#### Render Colors
-
-In the ColorList component, iterate over the list of colors and render each one in a SingleColor component. Fix the key problem by providing a unique id for each color.
-
-In the SingleColor component, display the hex value and weight (percent) of each color, and use inline CSS to set the background color of the component.
-
 #### React-Toastify
 
 Import and set up the react-toastify library.

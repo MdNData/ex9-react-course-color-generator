@@ -1,3 +1,8 @@
-export const SingleColor = () => {
-  return <h2>Single color</h2>;
+export const SingleColor = ({ hex, weight }) => {
+  return (
+    <article className="color" style={{ backgroundColor: "#" +  hex  }}>
+      <p>{hex}</p>
+      <p>{weight}</p>
+    </article>
+  );
 };
