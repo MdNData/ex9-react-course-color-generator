@@ -9,10 +9,6 @@ const App = () => {
   const [color, setColor] = useState("#000000");
   const [colorList, setColorList] = useState([]);
 
-  const successSend = (text) => {
-    toast.success("Generated successfully for " + text);
-  };
-
   const failedSend = (
     text = "Error generating the colors, try with different inputs."
   ) => {
@@ -43,7 +39,6 @@ const App = () => {
         setColor={setColor}
         colorList={colorList}
         setColorList={setColorList}
-        successSend={successSend}
         failedSend={failedSend}
         emptySend={emptySend}
       />

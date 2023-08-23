@@ -20,7 +20,6 @@ export const Form = ({
     } else {
       try {
         setColorList(new Values(color).all(10));
-        successSend(color);
       } catch (e) {
         failedSend();
       }
