@@ -1,13 +1,30 @@
 import Values from "values.js";
 
-export const Form = ({ color, setColor, colorList, setColorList }) => {
+export const Form = ({
+  color,
+  setColor,
+  colorList,
+  setColorList,
+  successSend,
+  failedSend,
+  emptySend,
+}) => {
   const handleColorChange = (e) => {
     setColor(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setColorList(new Values(color).all(10));
+    if (color == "") {
+      emptySend();
+    } else {
+      try {
+        setColorList(new Values(color).all(10));
+        successSend(color);
+      } catch (e) {
+        failedSend();
+      }
+    }
   };
 
   return (

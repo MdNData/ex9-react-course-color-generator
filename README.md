@@ -1,40 +1,4 @@
 
-#### React-Toastify
-
-Import and set up the react-toastify library.
-
-[React Toastify](https://fkhadra.github.io/react-toastify/introduction)
-
-```sh
-npm i react-toastify
-```
-
-main.jsx
-
-```js
-import 'react-toastify/dist/ReactToastify.css';
-```
-
-App.jsx
-
-```js
-import { ToastContainer, toast } from 'react-toastify';
-
-toast.success('awesome');
-toast.error('error message');
-
-return (
-  <main>
-    ...............
-    <ToastContainer position='top-center' />
-  </main>
-);
-```
-
-#### Create Color
-
-In the App component, create logic to generate a new list of colors when the user submits a new color value. Use react-toastify to display an error message if the values.js library cannot generate a color, and also display a toast message if the user tries to submit an empty value.
-
 #### Clipboard
 
 In the SingleColor component, set up a click handler that saves the hex value of the color to the browser clipboard.
