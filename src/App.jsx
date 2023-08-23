@@ -13,13 +13,28 @@ const App = () => {
     toast.success("Generated successfully for " + text);
   };
 
-  const failedSend = () => {
-    toast.error("Error generating the colors, try with different inputs. ");
+  const failedSend = (
+    text = "Error generating the colors, try with different inputs."
+  ) => {
+    toast.error(text);
   };
 
   const emptySend = () => {
     toast.warn("An input must be provided.");
   };
+
+  const copiedSuccess = (text) => {
+    toast("Copied " + text);
+  };
+
+  async function copyToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      copiedSuccess(text);
+    } catch (e) {
+      failedSend("Failed to copy! :=(");
+    }
+  }
 
   return (
     <section>
@@ -32,7 +47,7 @@ const App = () => {
         failedSend={failedSend}
         emptySend={emptySend}
       />
-      <ColorList colorList={colorList} />
+      <ColorList colorList={colorList} copyToClipboard={copyToClipboard} />
       <ToastContainer />
     </section>
   );

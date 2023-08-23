@@ -1,8 +1,14 @@
-export const SingleColor = ({ hex, weight }) => {
+export const SingleColor = ({ hex, weight, copyToClipboard }) => {
   return (
-    <article className="color" style={{ backgroundColor: "#" +  hex  }}>
-      <p>{hex}</p>
-      <p>{weight}</p>
+    <article
+      className="color"
+      style={{ backgroundColor: "#" + hex }}
+      onClick={() => {
+        copyToClipboard("#" + hex);
+      }}
+    >
+      <p>Hex : #{hex}</p>
+      <p>Weight : {weight}</p>
     </article>
   );
 };
