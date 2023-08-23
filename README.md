@@ -1,20 +1,3 @@
-## Figma URL
-
-[Color generator](https://www.figma.com/file/P2SJ5QGOZvi49EOpoVTvsT/Color-generator?node-id=0%3A1&t=ZY2gnIJ9zGTSXPW8-1)
-
-## Steps
-
-#### Setup
-
-Create three components: Form, ColorList, and SingleColor.
-
-In the App component, render the Form and ColorList components.
-
-#### Form Component
-
-In the Form component, set up a color state value and a form with an two input fields (color and text). Set up a handleChange function to update the color state value and a handleSubmit function to add the color to the list.
-
-[HTML Color Input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color)
 
 #### Values.js
 
@@ -33,8 +16,6 @@ new Values('#f15025').all(10);
 ```
 
 #### Render Colors
-
-Pass the colors list to the ColorList component.
 
 In the ColorList component, iterate over the list of colors and render each one in a SingleColor component. Fix the key problem by providing a unique id for each color.
 
